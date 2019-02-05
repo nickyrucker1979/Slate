@@ -39,13 +39,11 @@ from
   left join [lookup.prompt] p on f.prompt = p.id
 where
   f.record in (
-        '',
-        '',
-        '',
         ''
   )
 
 order by f.field, f.record
+
 
 ;
 
