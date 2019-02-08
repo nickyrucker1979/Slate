@@ -20,5 +20,5 @@ from
     on ms.mailing = msg.id
 where
   ms.status <> 'test'
-  and ms.person = ''
+  and ms.person = ''  -- person id
   ;
