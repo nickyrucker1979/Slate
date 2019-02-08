@@ -9,10 +9,16 @@ select top 100
   ms.reply,
   ms.status,
   ms.person,
-  ms.[identity]
+  ms.[identity],
+  msg.sender,
+  msg.subject,
+  msg.subject2,
+  msg.body
 from
   [message] ms
+  join [message.mailing] msg
+    on ms.mailing = msg.id
 where
   ms.status <> 'test'
   and ms.person = ''
-;
+  ;
