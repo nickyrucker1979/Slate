@@ -8,6 +8,9 @@ from [activity] a
 where
 --   [public] = 1
 --   and
-  record =  ''  -- student guid
+  record in (
+    '',  -- student guid
+    ''  -- app guid
+  )
   and (data != 'Source' or data is null)
 ;
