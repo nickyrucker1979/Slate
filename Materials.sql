@@ -5,8 +5,7 @@ select
   case when c.section is NULL then lc.section else c.section end as SECTION,
   case when c.subject is NULL then lc.subject else c.subject end as SECTION,
   case when c.status is NULL then 'Awaiting' else c.status end as SECTION,
-  c.effective,
-  c.expires
+  c.activity_date
 from
  [checklist] c
   left join [lookup.checklist] lc
